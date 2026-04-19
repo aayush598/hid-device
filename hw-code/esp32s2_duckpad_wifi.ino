@@ -57,7 +57,7 @@ const char* WIFI_SSID     = "vivo Y400 5G";
 const char* WIFI_PASSWORD = "aayushgid";
 
 // Your Vercel deployment URL (no trailing slash)
-const char* SERVER_URL    = "http://10.249.201.9:3000";
+const char* SERVER_URL    = "https://hid-device.vercel.app";
 
 // Must match the Device ID set on the web interface
 const char* DEVICE_ID     = "A3F2B1C0";
@@ -69,7 +69,7 @@ const unsigned long POLL_INTERVAL = 2000;
 //  Hardware
 // ════════════════════════════════════════════════════════════
 
-#define LED_PIN 15   // Built-in LED on most ESP32-S2 boards
+#define LED_PIN 18   // Built-in LED on most ESP32-S2 boards
 
 USBHIDKeyboard Keyboard;
 USBHIDMouse    Mouse;
