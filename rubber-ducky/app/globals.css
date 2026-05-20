@@ -4,6 +4,8 @@
 /* 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap'); */
 
+@custom-media --xs (min-width: 475px);
+
 :root {
   --bg: #0d0f14;
   --bg2: #13161e;
@@ -36,6 +38,22 @@ body {
   line-height: 1.5;
   height: 100%;
   overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Safe area padding for notched phones */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Prevent iOS zoom on input focus */
+@media screen and (max-width: 768px) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
 }
 
 /* Custom scrollbar */
